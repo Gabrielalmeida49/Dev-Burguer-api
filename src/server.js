@@ -1,0 +1,11 @@
+
+
+import app from './app.js';
+import './database/index.js';
+
+app.listen(3001, () => console.log('application is nunning at port 3001'));
+
+
+
+
+
