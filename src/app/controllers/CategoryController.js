@@ -60,7 +60,7 @@ class CategoryController {
 			},
 		});
 
-		if (existingCategory) {
+		if (existingCategory && existingCategory.id !== Number(id)) {
 			return response.status(400).json({ error: 'Category already exists' });
 		}
 

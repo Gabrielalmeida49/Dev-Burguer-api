@@ -2,12 +2,6 @@
 import Stripe from 'stripe';
 import * as Yup from 'yup';
 
-// import stripeConfig from '../../../config/stripe.js';
-
-// || stripeConfig.secretKey
-
-
-
 
 
 const calculateOrderAmount = (items) => {
@@ -87,16 +81,17 @@ export default new CreatePaymentIntentController();
 
 
 
-    //   const paymentIntent = await stripe.paymentIntents.create({
-    //         amount,
-    //         currency: 'brl',
-    //         automatic_payment_methods: {
-    //             enabled: true,
-    //         },
-    //     });
+    
 
-    //     response.json({
-    //         clientSecret: paymentIntent.client_secret,
-    //         dpmCheckerLink: `https://stripe.com{paymentIntent.id}`
-    //     });
 
+
+
+
+
+
+
+
+   
+
+
+  
