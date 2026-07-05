@@ -17,7 +17,7 @@ class Category extends Model {
 			url: {
 	type: Sequelize.VIRTUAL,
 	get() {
-		// Se o path já for um link de internet (como o do GitHub), usa ele direto!
+		
 		if (this.path && this.path.startsWith('http')) {
 			return this.path;
 		}

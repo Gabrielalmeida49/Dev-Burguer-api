@@ -21,7 +21,7 @@ import multerConfig from './config/multer.cjs';
 
 const routes = new Router();
 
-const upload = multer({ storage: multerConfig.Storage });
+const upload = multer({ storage: multerConfig.storage });
 
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
@@ -31,7 +31,6 @@ routes.get('/products', ProductController.index);
 routes.get('/categories', CategoryController.index);
 
 routes.use(authMiddleware);
-
 routes.post(
 	'/products',
 	adminMiddleware,
@@ -68,3 +67,9 @@ routes.put('/orders/:id', adminMiddleware, OrderController.update);
 routes.post('/create-payment-intent', CreatePaymentIntentController.store)
 
 export default routes;
+
+
+
+
+
+
