@@ -130,7 +130,16 @@ class CategoryController {
 				streamifier.createReadStream(request.file.buffer).pipe(stream);
 			});
 
-		const result = await uploadFromBuffer();
+		let result;
+
+
+		try {
+  	result = await uploadFromBuffer();
+
+	} catch (error) {
+  	console.error('ERRO CLOUDINARY:', error);
+  	return response.status(500).json(error);
+}
 
 		const newCategory = await Category.create({
 			name,
